@@ -15,6 +15,10 @@ public class ControladorPersonaje : MonoBehaviour {
 	private bool corriendo = false;
 	public float velocidad = 1f;
 
+	//Needed to get personaje's X and Y position
+	public Transform personaje;
+	public GameObject spring;
+
 
 	void Awake(){
 		animator = GetComponent<Animator> ();
@@ -22,7 +26,7 @@ public class ControladorPersonaje : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 
 	void FixedUpdate(){
@@ -42,8 +46,12 @@ public class ControladorPersonaje : MonoBehaviour {
 		if (Input.GetMouseButtonDown (0)) {
 			if (corriendo){
 				if (enSuelo || !doblesalto) {
+					//Creates a LeonardoJump point
+					Instantiate (spring, personaje.position, Quaternion.identity);
+
 					rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, fuerzaSalto);
 					rigidbody2D.AddForce(new Vector2(0, fuerzaSalto));
+					//Generar saltoAutomatico para Leonardo
 					if(!doblesalto && !enSuelo){
 						doblesalto = true;
 					}

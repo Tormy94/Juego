@@ -1,17 +1,20 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\BotonJugar.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ControladorLeonardo.cs">
     <Files>
-      <File FileName="Assets\Scripts\Scroll.cs" Line="24" Column="1" />
+      <File FileName="Assets\Scripts\ControladorPersonaje.cs" Line="9" Column="27" />
+      <File FileName="Assets\Scripts\Scroll.cs" Line="13" Column="83" />
       <File FileName="Assets\Scripts\Bloque.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ControladorPersonaje.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Item.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Item.cs" Line="20" Column="41" />
       <File FileName="Assets\Scripts\SeguirPersonaje.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\AspectUtility.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Generador.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Destructor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Puntuacion.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\BotonJugar.cs" Line="17" Column="24" />
+      <File FileName="Assets\Scripts\Generador.cs" Line="9" Column="27" />
+      <File FileName="Assets\Scripts\Destructor.cs" Line="24" Column="3" />
+      <File FileName="Assets\Scripts\Puntuacion.cs" Line="19" Column="3" />
+      <File FileName="Assets\Scripts\BotonJugar.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ControladorLeonardo.cs" Line="24" Column="70" />
+      <File FileName="Assets\Scripts\NotificationCenter.cs" Line="23" Column="14" />
+      <File FileName="Assets\Scripts\SaltoLeonardo.cs" Line="21" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
