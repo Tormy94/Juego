@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System;
 
@@ -17,7 +17,8 @@ public class SaltoLeonardo : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collider){
 		if(collider.tag == "Leonardo"){
 			NotificationCenter.DefaultCenter().PostNotification(this, "SaltoLeonardo");
+			Destroy(gameObject);
 		}
-		Destroy(gameObject);
+
 	}
 }

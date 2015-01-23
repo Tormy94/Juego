@@ -14,12 +14,20 @@ public class Destructor : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		if (other.tag == "Player") {
+		string tag = other.tag;
+		switch (tag) {
+		case "Player":
 			NotificationCenter.DefaultCenter().PostNotification(this,"PersonajeHaMuerto");
 			GameObject player = GameObject.Find("Player");
 			player.SetActive(false);
-		} else {
+			break;
+		case "Leonardo":
+			//Quitar comentarios cuando hagamos la implementacion del contador de Leonardo
+		//	NotificationCenter.DefaultCenter().PostNotification(this, "LeonardoHaMuerto");
+			break;
+		default: 
 			Destroy (other.gameObject);
+			break;
 		}
 	}
 }

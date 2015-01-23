@@ -9,7 +9,8 @@ public class ControladorPersonaje : MonoBehaviour {
 	private float comprobadorRadio = 0.07f;
 	public LayerMask mascaraSuelo;
 
-	private bool doblesalto = false;
+	private int maxSaltos = 2;
+	private int saltosDados = 1;
 	private Animator animator;
 
 	private bool corriendo = false;
@@ -35,9 +36,11 @@ public class ControladorPersonaje : MonoBehaviour {
 		}
 		animator.SetFloat ("SpeedX", rigidbody2D.velocity.x);
 		enSuelo = Physics2D.OverlapCircle (comprobadorSuelo.position, comprobadorRadio, mascaraSuelo);
+		//Reinicia el cuento de saltos en caso de que toque el suelo
 		animator.SetBool ("isGrounded", enSuelo);
 		if (enSuelo) {
-			doblesalto=false;
+			//dobleSalto = false;
+			saltosDados = 1;
 		}
 	}
 	
@@ -45,16 +48,14 @@ public class ControladorPersonaje : MonoBehaviour {
 	void Update () {
 		if (Input.GetMouseButtonDown (0)) {
 			if (corriendo){
-				if (enSuelo || !doblesalto) {
+				if (saltosDados < maxSaltos) {
 					//Creates a LeonardoJump point
 					Instantiate (spring, personaje.position, Quaternion.identity);
 
 					rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, fuerzaSalto);
 					rigidbody2D.AddForce(new Vector2(0, fuerzaSalto));
-					//Generar saltoAutomatico para Leonardo
-					if(!doblesalto && !enSuelo){
-						doblesalto = true;
-					}
+
+					saltosDados++;
 				}
 			}
 			else{

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class ControladorLeonardo : MonoBehaviour {
@@ -9,14 +9,14 @@ public class ControladorLeonardo : MonoBehaviour {
 	private float comprobadorRadio = 0.07f;
 	public LayerMask mascaraSuelo;
 
-	//HACE FALTA AÑADIR UN ANIMADOR
-	//private Animator animator;
+
+	private Animator animator;
 	
 	private bool corriendo = false;
 	public float velocidad = 1f;
 
 	void Awake() {
-		//animator = GetComponent<Animator> ();
+		animator = GetComponent<Animator> ();
 	}
 
 	// Use this for initialization
@@ -33,9 +33,9 @@ public class ControladorLeonardo : MonoBehaviour {
 		if (corriendo) {
 			rigidbody2D.velocity = new Vector2(velocidad, rigidbody2D.velocity.y);
 		}
-		//animator.SetFloat ("SpeedX", rigidbody2D.velocity.x);
+		animator.SetFloat ("SpeedX", rigidbody2D.velocity.x);
 		enSuelo = Physics2D.OverlapCircle (comprobadorSuelo.position, comprobadorRadio, mascaraSuelo);
-		//animator.SetBool ("isGrounded", enSuelo);
+		animator.SetBool ("isGrounded", enSuelo);
 	}
 	
 	// Update is called once per frame
