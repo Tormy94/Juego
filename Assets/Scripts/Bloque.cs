@@ -19,7 +19,7 @@ public class Bloque : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D collision){
 		if(!haColisionadoConElJugador && collision.gameObject.tag == "Player"){
 			GameObject obj = collision.contacts[0].collider.gameObject;
-			if(obj.name == "PataInferiorDerechaB" || obj.name == "PataInferiorIzquierdaB"){
+			if(obj.name == "BaseOscar"){
 				haColisionadoConElJugador = true;
 				NotificationCenter.DefaultCenter().PostNotification(this, "IncrementarPuntos", puntosGanados);
 			}

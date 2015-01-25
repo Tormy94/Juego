@@ -18,12 +18,13 @@ public class Destructor : MonoBehaviour {
 		switch (tag) {
 		case "Player":
 			NotificationCenter.DefaultCenter().PostNotification(this,"PersonajeHaMuerto");
-			GameObject player = GameObject.Find("Player");
-			player.SetActive(false);
+			GameObject oscar = GameObject.Find("Player");
+			oscar.SetActive(false);
 			break;
 		case "Leonardo":
 			//Quitar comentarios cuando hagamos la implementacion del contador de Leonardo
 		//	NotificationCenter.DefaultCenter().PostNotification(this, "LeonardoHaMuerto");
+			Destroy (other.gameObject);
 			break;
 		default: 
 			Destroy (other.gameObject);

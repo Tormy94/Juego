@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{49126A60-3895-A24A-FA92-DD3D400DAAE2}</ProjectGuid>
+	<ProjectGuid>{B18BAB37-3B0F-9767-2486-BA5242064673}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<AssemblyName>Assembly-UnityScript</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
@@ -46,22 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\ActivarGameOver.cs" />
-     <Compile Include="Assets\Scripts\AspectUtility.cs" />
-     <Compile Include="Assets\Scripts\Bloque.cs" />
-     <Compile Include="Assets\Scripts\BotonJugar.cs" />
-     <Compile Include="Assets\Scripts\CargarValoresPuntuacion.cs" />
-     <Compile Include="Assets\Scripts\ControladorLeonardo.cs" />
-     <Compile Include="Assets\Scripts\ControladorPersonaje.cs" />
-     <Compile Include="Assets\Scripts\Destructor.cs" />
-     <Compile Include="Assets\Scripts\EstadoJuego.cs" />
-     <Compile Include="Assets\Scripts\Generador.cs" />
-     <Compile Include="Assets\Scripts\Item.cs" />
-     <Compile Include="Assets\Scripts\NotificationCenter.cs" />
-     <Compile Include="Assets\Scripts\Puntuacion.cs" />
-     <Compile Include="Assets\Scripts\SaltoLeonardo.cs" />
-     <Compile Include="Assets\Scripts\Scroll.cs" />
-     <Compile Include="Assets\Scripts\SeguirPersonaje.cs" />
+     <Compile Include="Assets\Scripts\NewBehaviourScript.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
