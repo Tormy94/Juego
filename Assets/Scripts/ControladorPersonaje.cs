@@ -9,8 +9,8 @@ public class ControladorPersonaje : MonoBehaviour {
 	private float comprobadorRadio = 0.07f;
 	public LayerMask mascaraSuelo;
 
-	private int maxSaltos = 2;
-	private int saltosDados = 1;
+	static private int MAX_SALTOS = 2;
+	private int saltos = MAX_SALTOS;
 	private Animator animator;
 
 	private bool corriendo = false;
@@ -40,7 +40,7 @@ public class ControladorPersonaje : MonoBehaviour {
 		animator.SetBool ("isGrounded", enSuelo);
 		if (enSuelo) {
 			//dobleSalto = false;
-			saltosDados = 1;
+			saltos = MAX_SALTOS;
 		}
 	}
 	
@@ -48,14 +48,14 @@ public class ControladorPersonaje : MonoBehaviour {
 	void Update () {
 		if (Input.GetMouseButtonDown (0)) {
 			if (corriendo){
-				if (saltosDados < maxSaltos) {
+				if (saltos > 0) {
 					//Creates a LeonardoJump point
 					Instantiate (spring, personaje.position, Quaternion.identity);
 
 					rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, fuerzaSalto);
 					rigidbody2D.AddForce(new Vector2(0, fuerzaSalto));
 
-					saltosDados++;
+					saltos--;
 				}
 			}
 			else{
