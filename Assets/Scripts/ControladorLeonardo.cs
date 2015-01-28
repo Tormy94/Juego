@@ -8,12 +8,12 @@ public class ControladorLeonardo : MonoBehaviour {
 	public Transform comprobadorSuelo;
 	private float comprobadorRadio = 0.07f;
 	public LayerMask mascaraSuelo;
-
-
+	
 	private Animator animator;
 	
 	private bool corriendo = false;
 	public float velocidad = 1f;
+	
 
 	void Awake() {
 		animator = GetComponent<Animator> ();

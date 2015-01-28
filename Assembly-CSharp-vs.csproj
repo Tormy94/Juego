@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\ActivarGameOver.cs" />
      <Compile Include="Assets\Scripts\AspectUtility.cs" />
      <Compile Include="Assets\Scripts\Bloque.cs" />
+     <Compile Include="Assets\Scripts\BotonCargarEscena.cs" />
      <Compile Include="Assets\Scripts\BotonJugar.cs" />
      <Compile Include="Assets\Scripts\CargarValoresPuntuacion.cs" />
      <Compile Include="Assets\Scripts\ControladorLeonardo.cs" />
