@@ -9,28 +9,48 @@ public class GeneradorLeonardo : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-		NotificationCenter.DefaultCenter().AddObserver(this, "PersonajeHaMuerto");
+		GenerarLeo ();
 		NotificationCenter.DefaultCenter().AddObserver(this, "PersonajeEmpiezaACorrer");
+		NotificationCenter.DefaultCenter().AddObserver(this, "PersonajeHaMuerto");
+		//NotificationCenter.DefaultCenter().AddObserver(this, "LeonardoHaMuerto");
 	}
 
 	void PersonajeHaMuerto(){
 		fin = true;
 	}
+
 	void PersonajeEmpiezaACorrer(Notification noficacion){
 		Generar ();
 	}
+
+	/*void LeonardoHaMuerto(Notification noficacion){
+		Generar ();
+	}*/
 	
 	// Update is called once per frame
-	void Update () {
+	/*void Update () {
 		if (GameObject.Find("Leonardo(Clone)")== null) {
 			Generar ();
 		}
-	}
+	}*/
 
 	void Generar(){
-		if (!fin) {
+		while(!fin){ 
+			GenerarLeo ();
+		} 
+	}
+	void GenerarLeo(){
+		if (GameObject.Find ("Leonardo(Clone)") == null) {
 			Instantiate (Leonardo, transform.position, Quaternion.identity);
 		}
 	}
+
+	/*
+	void Generar(){
+		if (!fin && GameObject.Find ("Leonardo(Clone)") == null) {
+			Instantiate (Leonardo, transform.position, Quaternion.identity);
+		}
+	}
+	 */
+
 }
