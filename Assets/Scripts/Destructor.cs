@@ -15,18 +15,22 @@ public class Destructor : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		string tag = other.tag;
+		GameObject Leonardo = GameObject.Find("Leonardo(Clone)");
 		switch (tag) {
 		case "Player":
 			NotificationCenter.DefaultCenter().PostNotification(this,"PersonajeHaMuerto");
 			GameObject oscar = GameObject.Find("Player");
+
 			//GameObject leo = GameObject.Find("Leonardo");
 			//leo.SetActive(false);
 			oscar.SetActive(false);
+			Destroy(Leonardo);
 			break;
 		case "Leonardo":
 			//Quitar comentarios cuando hagamos la implementacion del contador de Leonardo
 		//	NotificationCenter.DefaultCenter().PostNotification(this, "LeonardoHaMuerto");
 			//Destroy (other.gameObject);
+			Destroy(Leonardo);
 			break;
 		default: 
 			Destroy (other.gameObject);
