@@ -9,7 +9,7 @@ public class ControladorPersonaje : MonoBehaviour {
 	private float comprobadorRadio = 0.07f;
 	public LayerMask mascaraSuelo;
 
-	static private int MAX_SALTOS = 2;
+	static private int MAX_SALTOS = 1;
 	private int saltos = MAX_SALTOS;
 	private Animator animator;
 
