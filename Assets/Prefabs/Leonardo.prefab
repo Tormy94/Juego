@@ -28,7 +28,6 @@ GameObject:
   - 50: {fileID: 5058776}
   - 114: {fileID: 11420758}
   - 95: {fileID: 9560858}
-  - 114: {fileID: 11460858}
   m_Layer: 8
   m_Name: Leonardo
   m_TagString: Leonardo
@@ -591,18 +590,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   velocidad: 8
---- !u!114 &11460858
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 112032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a33b719c9066e3e4b81a6eaaaae69fe6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puntuacionMaxima: 0
 --- !u!212 &21212032
 SpriteRenderer:
   m_ObjectHideFlags: 1
