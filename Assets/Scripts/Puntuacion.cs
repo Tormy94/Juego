@@ -31,6 +31,10 @@ public class Puntuacion : MonoBehaviour {
 			return;
 		}
 
+		/*foreach (int s in EstadoJuego.estadoJuego.objetos_guardados.Values) {
+						Debug.Log (s);
+				}*/
+
 		EstadoJuego.estadoJuego.objetos_guardados ["MuertesPersonaje"]++;
 
 		if (puntuacion > EstadoJuego.estadoJuego.puntuacionMaxima) {

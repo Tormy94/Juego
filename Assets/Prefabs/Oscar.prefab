@@ -50,6 +50,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &140254
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 440254}
+  - 61: {fileID: 6140254}
+  m_Layer: 0
+  m_Name: BaseOscar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &408918
 Transform:
   m_ObjectHideFlags: 1
@@ -71,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0450000018, y: -.700999975, z: 9.81900024}
+  m_LocalPosition: {x: -.0450000018, y: -1.09000003, z: 9.81900024}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 408918}
@@ -85,8 +101,21 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.0199999996, y: .589999974, z: 10}
   m_LocalScale: {x: .497279584, y: .497279584, z: .497279584}
-  m_Children: []
+  m_Children:
+  - {fileID: 440254}
   m_Father: {fileID: 408918}
+  m_RootOrder: 0
+--- !u!4 &440254
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.0402187482, y: -2.95608377, z: -.365268618}
+  m_LocalScale: {x: 1.91039419, y: 2.01094127, z: 2.01094127}
+  m_Children: []
+  m_Father: {fileID: 439930}
   m_RootOrder: 0
 --- !u!50 &5039930
 Rigidbody2D:
@@ -114,6 +143,17 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 1.14999998, y: 4.75454569}
   m_Center: {x: -.0234442353, y: -.672076225}
+--- !u!61 &6140254
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140254}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: .75999999, y: .280000001}
+  m_Center: {x: 0, y: 0}
 --- !u!95 &9539930
 Animator:
   serializedVersion: 3

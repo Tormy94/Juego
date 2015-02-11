@@ -32,6 +32,19 @@ public class Logros {
 		return logroDesbloqueado;
 	}
 
+	private ArrayList logrosDesbloqueados(EstadoJuego e) {
+		ArrayList desbloqueados = new ArrayList ();
+		for (int i = 0; i < logros.Length; i++) {	
+			if (!logros[i].desbloqueado) {
+				logros[i].desbloqueado = logros[i].condicion(e);
+				if (logros[i].desbloqueado) {
+					desbloqueados.Add(logros[i]);
+				}
+			}
+		}
+		return desbloqueados;
+	}
+
 	private void generarLogros() {
 		logros [0] = CorreForrest ();
 		logros [1] = muchosSeven1 ();
